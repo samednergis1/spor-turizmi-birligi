@@ -90,6 +90,7 @@ export function rootMetadata(locale: Locale): Metadata {
             "outdoor sports",
           ],
     robots: { index: true, follow: true },
+    icons: { icon: "/brand/logo.jpg", apple: "/brand/logo.jpg" },
     alternates: {
       canonical: localePath(locale),
       languages: {
