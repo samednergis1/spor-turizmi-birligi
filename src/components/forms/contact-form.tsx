@@ -7,12 +7,13 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { ui } from "@/content/ui"
+import type { ContactSource } from "@/lib/contact-message"
 import type { Locale } from "@/lib/locale"
 import { cn } from "cn"
 
 type Errors = Partial<Record<"name" | "email" | "subject" | "message" | "consent", string>>
 
-export function ContactForm({ locale }: { locale: Locale }) {
+export function ContactForm({ locale, source }: { locale: Locale; source: ContactSource }) {
   const labels = ui(locale)
   const params = useSearchParams()
   const preset = params.get("konu") ?? "genel"
@@ -24,13 +25,14 @@ export function ContactForm({ locale }: { locale: Locale }) {
     setSubject(initialSubject)
   }
   const [errors, setErrors] = useState<Errors>({})
-  const [done, setDone] = useState(false)
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+  const [errorCode, setErrorCode] = useState<"unconfigured" | "delivery">("delivery")
   const [resetKey, setResetKey] = useState(0)
 
   const subjectOptions = labels.subjects
   const described = labels.formDisclaimer
 
-  if (done) {
+  if (status === "success") {
     return (
       <div className="rounded-3xl border border-teal/40 bg-accent p-6 sm:p-8" role="status">
         <h2 className="font-display text-3xl text-navy">{labels.successTitle}</h2>
@@ -39,7 +41,8 @@ export function ContactForm({ locale }: { locale: Locale }) {
           type="button"
           className="mt-6 h-11 px-5"
           onClick={() => {
-            setDone(false)
+            setStatus("idle")
+            setSubject(initialSubject)
             setResetKey((value) => value + 1)
           }}
         >
@@ -54,8 +57,9 @@ export function ContactForm({ locale }: { locale: Locale }) {
       key={`${initialSubject}-${resetKey}`}
       className="rounded-3xl border border-border bg-card p-5 shadow-sm sm:p-8"
       noValidate
-      onSubmit={(event) => {
+      onSubmit={async (event) => {
         event.preventDefault()
+        if (status === "loading") return
         const data = new FormData(event.currentTarget)
         const nextErrors: Errors = {}
         const name = String(data.get("name") ?? "").trim()
@@ -69,10 +73,35 @@ export function ContactForm({ locale }: { locale: Locale }) {
         if (message.length < 20) nextErrors.message = labels.messageShort
         if (!consent) nextErrors.consent = labels.consentRequired
         setErrors(nextErrors)
-        if (Object.keys(nextErrors).length === 0) setDone(true)
+        if (Object.keys(nextErrors).length > 0) return
+        setStatus("loading")
+        const response = await fetch("/api/iletisim", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            source,
+            subject: chosen,
+            name,
+            email,
+            organization: String(data.get("organization") ?? "").trim(),
+            role: String(data.get("role") ?? "").trim(),
+            phone: String(data.get("phone") ?? "").trim(),
+            message,
+            consent: true,
+            companyWebsite: String(data.get("companyWebsite") ?? ""),
+          }),
+        }).catch(() => null)
+        if (!response?.ok) {
+          const body = (await response?.json().catch(() => null)) as { error?: string } | null
+          setErrorCode(body?.error === "unconfigured" ? "unconfigured" : "delivery")
+          setStatus("error")
+          return
+        }
+        setStatus("success")
       }}
     >
       <p className="text-sm leading-6 text-muted-foreground">{described}</p>
+      <input type="text" name="companyWebsite" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
       <div className="mt-6 grid gap-5 sm:grid-cols-2">
         <Field id="name" label={labels.formName} error={errors.name}>
           <Input id="name" name="name" autoComplete="name" required aria-invalid={Boolean(errors.name)} className="h-11" />
@@ -127,8 +156,13 @@ export function ContactForm({ locale }: { locale: Locale }) {
           </p>
         ) : null}
       </div>
-      <Button type="submit" className="mt-6 h-12 px-6 text-base">
-        {labels.send}
+      {status === "error" ? (
+        <p className="mt-5 text-sm leading-6 text-destructive" role="alert">
+          {errorCode === "unconfigured" ? labels.unconfigured : labels.sendError}
+        </p>
+      ) : null}
+      <Button type="submit" className="mt-6 h-12 px-6 text-base" disabled={status === "loading"}>
+        {status === "loading" ? labels.sending : labels.send}
       </Button>
     </form>
   )

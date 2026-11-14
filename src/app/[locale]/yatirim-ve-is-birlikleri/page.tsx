@@ -91,7 +91,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
           <h2 className="text-3xl text-navy">{tr ? "Ön Başvuru" : "Early Request"}</h2>
           <div className="mt-6">
             <Suspense fallback={<div className="h-40 rounded-3xl bg-muted" />}>
-              <ContactForm locale={locale} />
+              <ContactForm locale={locale} source="yatirim" />
             </Suspense>
           </div>
         </div>

@@ -45,7 +45,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       />
       <Container className="py-8 sm:py-10">
         <Suspense fallback={<div className="h-40 rounded-3xl bg-muted" />}>
-          <ContactForm locale={locale} />
+          <ContactForm locale={locale} source="iletisim" />
         </Suspense>
         <details className="mt-6 rounded-2xl border border-border bg-card p-4">
           <summary className="cursor-pointer text-sm font-semibold text-navy">{labels.contactChannel}</summary>

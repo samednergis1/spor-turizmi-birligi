@@ -111,14 +111,20 @@ export function ui(locale: Locale) {
     formMessage: tr ? "Mesaj" : "Message",
     optional: tr ? "isteğe bağlı" : "optional",
     consent: tr
-      ? "Bu formun ön iletişim amacıyla tasarlandığını, bu sürümde bilgilerin bir sunucuya kaydedilmediğini ve aydınlatma metninin taslak olduğunu okudum."
-      : "I have read that this form is designed for early contact, that this version does not store information on a server, and that the privacy notice is a draft.",
-    send: tr ? "İletiyi hazırla" : "Prepare the message",
-    sending: tr ? "Kontrol ediliyor" : "Checking",
-    successTitle: tr ? "İleti bu cihazda hazırlandı" : "The message was prepared on this device",
+      ? "Bilgilerimin ön iletişim için spor@doguveguneydogustb.com adresine iletilmesini ve aydınlatma metninin taslak olduğunu okudum. Site bu iletinin bir kopyasını kendi veri tabanında saklamaz."
+      : "I have read that my details will be sent to spor@doguveguneydogustb.com for early contact, and that the privacy notice is a draft. The site does not keep a copy in its own database.",
+    send: tr ? "Gönder" : "Send",
+    sending: tr ? "Gönderiliyor" : "Sending",
+    successTitle: tr ? "Mesajınız İletildi" : "Your Message Was Sent",
     successBody: tr
-      ? "Bilgiler bir sunucuya gönderilmedi ve kaydedilmedi. Yayın öncesi kurumsal e-posta bağlandığında form gerçek bir kanala alınacaktır. O zamana kadar bu önizleme, alanların tamamlandığını göstermek içindir."
-      : "The details were not sent to a server and were not stored. When a corporate email is connected before launch, the form will use a real channel. Until then this preview only shows that the fields are complete.",
+      ? "İleti spor@doguveguneydogustb.com adresine ulaştı. Bu bir ön iletişimdir; üyelik, ortaklık veya yatırım onayı değildir."
+      : "The message reached spor@doguveguneydogustb.com. This is early contact, not membership, partnership or investment approval.",
+    sendError: tr
+      ? "Mesaj iletilemedi. Biraz sonra yeniden deneyin."
+      : "The message could not be sent. Please try again shortly.",
+    unconfigured: tr
+      ? "E-posta kanalı henüz bağlanmadı. Erişim anahtarı eklenince iletiler spor@doguveguneydogustb.com adresine düşer."
+      : "The email channel is not connected yet. Once the access key is added, messages will reach spor@doguveguneydogustb.com.",
     another: tr ? "Yeni bir ileti yaz" : "Write another message",
     required: tr ? "Bu alan gerekli." : "This field is required.",
     emailInvalid: tr ? "Geçerli bir e-posta yazın." : "Enter a valid email address.",
@@ -137,8 +143,8 @@ export function ui(locale: Locale) {
       ? "Açık adres veya resmî ofis bilgisi yayımlanmamıştır."
       : "No street address or official office has been published.",
     noEmail: tr
-      ? "Kurumsal e-posta, hukukî yapı ve alan adı netleştikten sonra yayımlanacaktır."
-      : "A corporate email will be published once the legal structure and domain are settled.",
+      ? "Formdan gönderilen iletiler spor@doguveguneydogustb.com adresine ulaşır."
+      : "Messages sent from the form reach spor@doguveguneydogustb.com.",
     contactChannel: tr ? "İletişim Kanalı" : "Contact Channel",
   }
 }

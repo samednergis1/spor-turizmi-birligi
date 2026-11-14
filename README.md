@@ -23,4 +23,12 @@ Kök adres Türkçe ana sayfaya yönlenir. İngilizce için adresin başına `/e
 - Alt bilgide zorunlu hukuki uyarı
 - Sayfa başlıkları, açıklamalar, `hreflang`, `sitemap.xml` ve `robots.txt`
 
-Şehir sayfalarındaki tesis, etkinlik ve ulaşım alanları bilinçli olarak boştur. Doğrulanmamış kapasite veya yatırım vaadi yazılmaz. İletişim formu bu sürümde veriyi bir sunucuya kaydetmez.
+Şehir sayfalarındaki tesis, etkinlik ve ulaşım alanları bilinçli olarak boştur. Doğrulanmamış kapasite veya yatırım vaadi yazılmaz.
+
+İletişim ve ön başvuru formları, mesajı [Web3Forms](https://web3forms.com) üzerinden `spor@doguveguneydogustb.com` adresine yollar. Ek paket gerekmez. Kökte `.env.local` dosyasına yalnızca erişim anahtarını yazın ve sunucuyu yeniden başlatın:
+
+```bash
+WEB3FORMS_ACCESS_KEY=buraya-anahtar
+```
+
+Anahtar yokken form gönderilmez ve ekranda kanalın henüz bağlanmadığı yazılır. Site, iletinin bir kopyasını kendi veri tabanında tutmaz.

@@ -56,8 +56,8 @@ export const news: NewsItem[] = [
         en: "Wording on the city pages describes geographic potential. Facility, calendar and investment details will not be added before local sources are confirmed. News will grow only with items that have a date and a source.",
       },
       {
-        tr: "Oluşumun hâlihazırda resmî tüzel kişilik statüsü bulunmamaktadır. Sitedeki formlar ön iletişim taslağıdır; üyelik, aidat, bağış veya ortaklık onayı üretmez. Bu sürümde form verisi bir sunucuya kaydedilmez.",
-        en: "The initiative does not currently have official legal-entity status. Forms on the site are a draft for early contact; they do not create membership, fees, donations or partnership approval. This version does not store form data on a server.",
+        tr: "Oluşumun hâlihazırda resmî tüzel kişilik statüsü bulunmamaktadır. Sitedeki formlar ön iletişim içindir; üyelik, aidat, bağış veya ortaklık onayı üretmez. İleti e-posta olarak gider, sitede bir kopyası saklanmaz.",
+        en: "The initiative does not currently have official legal-entity status. Forms on the site are for early contact; they do not create membership, fees, donations or partnership approval. The message goes by email, and the site does not keep a copy.",
       },
     ],
   },

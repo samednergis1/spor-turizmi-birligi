@@ -17,14 +17,14 @@ export const legalPages: LegalPage[] = [
     slug: "gizlilik",
     title: { tr: "Gizlilik Politikası", en: "Privacy Policy" },
     description: {
-      tr: "Bu sürüme ait gizlilik taslağı. Form verisi sunucuda saklanmaz.",
-      en: "The privacy draft for this version. Form data is not stored on a server.",
+      tr: "Bu sürüme ait gizlilik taslağı. Form iletisi e-posta olarak gider; sitede bir kopyası saklanmaz.",
+      en: "The privacy draft for this version. A form message is sent by email; the site does not keep a copy.",
     },
     paragraphs: [
       draft,
       {
-        tr: "Site, şehirler, spor alanları ve iş birliği kanalları hakkında kamuya açık bilgi sunar. Bu sürümde iletişim formuna yazılan ad, e-posta ve mesaj bir sunucuya gönderilmez ve kaydedilmez. Başarılı doğrulama yalnızca tarayıcıda gösterilir.",
-        en: "The site offers public information about cities, sports themes and cooperation channels. In this version the name, email and message written in the contact form are not sent to a server and are not stored. A successful check is shown only in the browser.",
+        tr: "Site, şehirler, spor alanları ve iş birliği kanalları hakkında kamuya açık bilgi sunar. İletişim ve ön başvuru formuna yazılan ad, e-posta ve mesaj, spor@doguveguneydogustb.com adresine e-posta olarak iletilir. Site bu iletinin bir kopyasını kendi veri tabanında saklamaz.",
+        en: "The site offers public information about cities, sports themes and cooperation channels. The name, email and message written in the contact or early-request form are emailed to spor@doguveguneydogustb.com. The site does not keep a copy in its own database.",
       },
       {
         tr: "Zorunlu olmayan çerez ve ziyaret ölçümü kullanılmaz. Çerez bildiriminin kapatılması, tarayıcınızın yerel deposunda bir işaret bırakır. Bu işaret kişisel profil oluşturmaz.",
@@ -46,8 +46,8 @@ export const legalPages: LegalPage[] = [
     paragraphs: [
       draft,
       {
-        tr: "Amaç, bölgesel spor turizmi hakkında ön iletişim kurmaktır. İşlenen olabilecek veriler: ad soyad, e-posta, isteğe bağlı telefon, kurum, unvan, konu ve mesaj. Bu sürümde bu veriler işlenmek üzere bir sisteme aktarılmaz.",
-        en: "The purpose is early contact about regional sports tourism. Data that could be processed: name, email, optional phone, organisation, title, subject and message. In this version that data is not transferred to a system for processing.",
+        tr: "Amaç, bölgesel spor turizmi hakkında ön iletişim kurmaktır. İletilen veriler: ad soyad, e-posta, isteğe bağlı telefon, kurum, unvan, konu ve mesaj. Bu veriler e-posta hizmeti üzerinden spor@doguveguneydogustb.com adresine gider. Site kendi veri tabanında bir kayıt tutmaz.",
+        en: "The purpose is early contact about regional sports tourism. The data sent: name, email, optional phone, organisation, title, subject and message. That data goes by an email service to spor@doguveguneydogustb.com. The site does not keep a record in its own database.",
       },
       {
         tr: "Hukuki sebep, açık rıza veya meşru menfaat gibi başlıklar yayın öncesi hukuk danışmanlığıyla seçilecektir. İlgili kişi hakları; bilgi talep etme, düzeltme, silme ve şikâyet, veri sorumlusu belli olduktan sonra işletilecektir.",
