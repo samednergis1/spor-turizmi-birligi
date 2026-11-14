@@ -46,8 +46,8 @@ export const legalPages: LegalPage[] = [
     paragraphs: [
       draft,
       {
-        tr: "Amaç, bölgesel spor turizmi hakkında ön iletişim kurmaktır. İletilen veriler: ad soyad, e-posta, isteğe bağlı telefon, kurum, unvan, konu ve mesaj. Bu veriler e-posta hizmeti üzerinden spor@doguveguneydogustb.com adresine gider. Site kendi veri tabanında bir kayıt tutmaz.",
-        en: "The purpose is early contact about regional sports tourism. The data sent: name, email, optional phone, organisation, title, subject and message. That data goes by an email service to spor@doguveguneydogustb.com. The site does not keep a record in its own database.",
+        tr: "Amaç, bölgesel spor turizmi hakkında ön iletişim kurmaktır. İletilen veriler: ad soyad, e-posta, telefon, kurum, unvan, konu ve mesaj. Ad, e-posta ve telefon zorunludur. Bu veriler e-posta hizmeti üzerinden spor@doguveguneydogustb.com adresine gider. Site kendi veri tabanında bir kayıt tutmaz.",
+        en: "The purpose is early contact about regional sports tourism. The data sent: name, email, phone, organisation, title, subject and message. Name, email and phone are required. That data goes by an email service to spor@doguveguneydogustb.com. The site does not keep a record in its own database.",
       },
       {
         tr: "Hukuki sebep, açık rıza veya meşru menfaat gibi başlıklar yayın öncesi hukuk danışmanlığıyla seçilecektir. İlgili kişi hakları; bilgi talep etme, düzeltme, silme ve şikâyet, veri sorumlusu belli olduktan sonra işletilecektir.",

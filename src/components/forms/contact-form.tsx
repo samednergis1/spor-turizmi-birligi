@@ -11,7 +11,7 @@ import type { ContactSource } from "@/lib/contact-message"
 import type { Locale } from "@/lib/locale"
 import { cn } from "cn"
 
-type Errors = Partial<Record<"name" | "email" | "subject" | "message" | "consent", string>>
+type Errors = Partial<Record<"name" | "email" | "phone" | "subject" | "message" | "consent", string>>
 
 export function ContactForm({ locale, source }: { locale: Locale; source: ContactSource }) {
   const labels = ui(locale)
@@ -64,11 +64,16 @@ export function ContactForm({ locale, source }: { locale: Locale; source: Contac
         const nextErrors: Errors = {}
         const name = String(data.get("name") ?? "").trim()
         const email = String(data.get("email") ?? "").trim()
+        const phone = String(data.get("phone") ?? "").trim()
         const message = String(data.get("message") ?? "").trim()
         const chosen = String(data.get("subject") ?? "")
         const consent = data.get("consent") === "on"
-        if (name.length < 2) nextErrors.name = labels.required
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) nextErrors.email = labels.emailInvalid
+        if (!name) nextErrors.name = labels.required
+        else if (name.length < 2) nextErrors.name = labels.invalid
+        if (!email) nextErrors.email = labels.required
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) nextErrors.email = labels.emailInvalid
+        if (!phone) nextErrors.phone = labels.required
+        else if (phone.replace(/\D/g, "").length < 10) nextErrors.phone = labels.invalid
         if (!chosen) nextErrors.subject = labels.required
         if (message.length < 20) nextErrors.message = labels.messageShort
         if (!consent) nextErrors.consent = labels.consentRequired
@@ -85,7 +90,7 @@ export function ContactForm({ locale, source }: { locale: Locale; source: Contac
             email,
             organization: String(data.get("organization") ?? "").trim(),
             role: String(data.get("role") ?? "").trim(),
-            phone: String(data.get("phone") ?? "").trim(),
+            phone,
             message,
             consent: true,
             companyWebsite: String(data.get("companyWebsite") ?? ""),
@@ -115,8 +120,8 @@ export function ContactForm({ locale, source }: { locale: Locale; source: Contac
         <Field id="role" label={`${labels.formRole} (${labels.optional})`}>
           <Input id="role" name="role" autoComplete="organization-title" className="h-11" />
         </Field>
-        <Field id="phone" label={`${labels.formPhone} (${labels.optional})`}>
-          <Input id="phone" name="phone" type="tel" autoComplete="tel" className="h-11" />
+        <Field id="phone" label={labels.formPhone} error={errors.phone}>
+          <Input id="phone" name="phone" type="tel" autoComplete="tel" required aria-invalid={Boolean(errors.phone)} className="h-11" />
         </Field>
         <Field id="subject" label={labels.formSubject} error={errors.subject}>
           <select

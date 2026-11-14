@@ -126,8 +126,9 @@ export function ui(locale: Locale) {
       ? "E-posta kanalı henüz bağlanmadı. Erişim anahtarı eklenince iletiler spor@doguveguneydogustb.com adresine düşer."
       : "The email channel is not connected yet. Once the access key is added, messages will reach spor@doguveguneydogustb.com.",
     another: tr ? "Yeni bir ileti yaz" : "Write another message",
-    required: tr ? "Bu alan gerekli." : "This field is required.",
-    emailInvalid: tr ? "Geçerli bir e-posta yazın." : "Enter a valid email address.",
+    required: tr ? "Bu alanın doldurulması zorunludur." : "This field must be filled in.",
+    invalid: tr ? "Lütfen geçerli bir bilgi giriniz." : "Please enter valid information.",
+    emailInvalid: tr ? "Lütfen geçerli bir bilgi giriniz." : "Please enter valid information.",
     messageShort: tr ? "Mesajı biraz daha açın." : "Please write a little more.",
     consentRequired: tr ? "Devam etmek için onay gerekli." : "Consent is required to continue.",
     subjects: [

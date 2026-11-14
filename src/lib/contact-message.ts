@@ -42,9 +42,11 @@ export function parseContactPayload(input: unknown): ContactPayload | null {
   if (!contactSubjects.includes(subject as ContactSubject)) return null
   const name = text(body.name, 120)
   const email = text(body.email, 200)
+  const phone = text(body.phone, 40)
   const message = text(body.message, 4000)
   if (name.length < 2) return null
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return null
+  if (phone.replace(/\D/g, "").length < 10) return null
   if (message.length < 20) return null
   if (body.consent !== true) return null
   return {
@@ -54,7 +56,7 @@ export function parseContactPayload(input: unknown): ContactPayload | null {
     email,
     organization: text(body.organization, 160),
     role: text(body.role, 160),
-    phone: text(body.phone, 40),
+    phone,
     message,
     consent: true,
     companyWebsite: text(body.companyWebsite, 200),
