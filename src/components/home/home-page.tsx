@@ -54,7 +54,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/25" />
         <Container className="relative flex min-h-[calc(100svh-9.5rem)] flex-col justify-end py-14 sm:py-20">
-          <p className="text-xs font-semibold tracking-[0.2em] text-gold uppercase">
+          <p className="text-2xl font-bold tracking-wide text-gold sm:text-4xl">
             {tr ? "Sporla keşfet, turizmle geliştir." : "Discover through sport, develop through tourism."}
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl leading-[1.05] text-ivory sm:text-6xl lg:text-7xl">
@@ -100,7 +100,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               {tr ? "Tanıtım" : "Introduction"}
             </p>
             <h2 className="mt-3 text-4xl leading-tight text-navy">
-              {tr ? "Potansiyel, ortak bir cümlede buluşuyor." : "Potential, gathered in one shared sentence."}
+              {tr ? "Potansiyel, Ortak Bir Cümlede Buluşuyor." : "Potential, Gathered in One Shared Sentence."}
             </h2>
           </div>
           <div className="space-y-5 text-base leading-8 text-navy/85 lg:col-span-8">
@@ -109,16 +109,21 @@ export function HomePage({ locale }: { locale: Locale }) {
                 ? "Doğu ve Güneydoğu Anadolu, sahip olduğu doğal güzellikleri, coğrafi çeşitliliği, kültürel mirası ve sportif imkânlarıyla Türkiye'nin önemli spor turizmi potansiyellerinden birini barındırmaktadır."
                 : "Eastern and Southeastern Anatolia holds one of Türkiye's important sports-tourism potentials, through its natural beauty, geographic variety, cultural heritage and sporting possibilities."}
             </p>
-            <p>
-              {tr
-                ? "Doğu ve Güneydoğu Anadolu Spor Turizmi Birliği olarak bu potansiyelin ortaya çıkarılması, geliştirilmesi ve ulusal ve uluslararası alanda tanıtılması için çalışıyoruz. Şehirlerimizi, kurumlarımızı, spor paydaşlarımızı ve yatırımcılarımızı ortak bir hedef etrafında buluşturarak spor turizminin bölgesel kalkınmaya katkısını artırmayı amaçlıyoruz."
-                : "As the Eastern and Southeastern Anatolia Sports Tourism Union, we work to reveal, develop and present this potential nationally and internationally. We aim to increase the contribution of sports tourism to regional development by gathering our cities, institutions, sports stakeholders and investors around a shared goal."}
-            </p>
-            <p className="border-l-2 border-gold pl-4 text-sm leading-7 text-muted-foreground">
-              {tr
-                ? "Birlik adı kurumsal addır. Oluşum, gönüllü bir iş birliği platformudur ve hâlihazırda resmî tüzel kişilik statüsü bulunmamaktadır."
-                : "The union name is the institutional name. The initiative is a voluntary cooperation platform and does not currently have official legal-entity status."}
-            </p>
+            <details className="text-base leading-8">
+              <summary className="cursor-pointer text-sm font-semibold text-navy">
+                {tr ? "Devamını Oku" : "Read More"}
+              </summary>
+              <p className="mt-3">
+                {tr
+                  ? "Doğu ve Güneydoğu Anadolu Spor Turizmi Birliği olarak bu potansiyelin ortaya çıkarılması, geliştirilmesi ve ulusal ve uluslararası alanda tanıtılması için çalışıyoruz. Şehirlerimizi, kurumlarımızı, spor paydaşlarımızı ve yatırımcılarımızı ortak bir hedef etrafında buluşturarak spor turizminin bölgesel kalkınmaya katkısını artırmayı amaçlıyoruz."
+                  : "As the Eastern and Southeastern Anatolia Sports Tourism Union, we work to reveal, develop and present this potential nationally and internationally. We aim to increase the contribution of sports tourism to regional development by gathering our cities, institutions, sports stakeholders and investors around a shared goal."}
+              </p>
+              <p className="mt-3 border-l-2 border-gold pl-4 text-sm leading-7 text-muted-foreground">
+                {tr
+                  ? "Birlik adı kurumsal addır. Oluşum, gönüllü bir iş birliği platformudur ve hâlihazırda resmî tüzel kişilik statüsü bulunmamaktadır."
+                  : "The union name is the institutional name. The initiative is a voluntary cooperation platform and does not currently have official legal-entity status."}
+              </p>
+            </details>
           </div>
         </Container>
       </section>
@@ -128,14 +133,14 @@ export function HomePage({ locale }: { locale: Locale }) {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="text-xs font-semibold tracking-[0.18em] text-teal-ink uppercase">
-                {tr ? "Şehirleri keşfet" : "Explore the cities"}
+                {tr ? "Şehirleri Keşfet" : "Explore the Cities"}
               </p>
               <h2 className="mt-3 max-w-2xl text-4xl text-navy">
-                {tr ? "İki bölge, tek harita." : "Two regions, one map."}
+                {tr ? "İki Bölge, Tek Harita." : "Two Regions, One Map."}
               </h2>
             </div>
             <Link href={localePath(locale, "/sehirlerimiz")} className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:text-teal-ink">
-              {tr ? "Şehirlerin tamamı" : "All cities"} <ArrowRight className="size-4" />
+              {tr ? "Şehirlerin Tamamı" : "All Cities"} <ArrowRight className="size-4" />
             </Link>
           </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -182,10 +187,10 @@ export function HomePage({ locale }: { locale: Locale }) {
         <Container>
           <div className="max-w-2xl">
             <p className="text-xs font-semibold tracking-[0.18em] text-teal-ink uppercase">
-              {tr ? "Spor turizmi alanları" : "Sports tourism themes"}
+              {tr ? "Spor Turizmi Alanları" : "Sports Tourism Themes"}
             </p>
             <h2 className="mt-3 text-4xl text-navy">
-              {tr ? "Branşa göre bakın." : "Look by discipline."}
+              {tr ? "Branşa Göre Bakın." : "Look by Discipline."}
             </h2>
           </div>
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -200,7 +205,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                     <h3 className="mt-4 text-2xl text-navy">{tx(sport.title, locale)}</h3>
                     <p className="mt-2 text-sm leading-6 text-muted-foreground">{tx(sport.summary, locale)}</p>
                     <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-navy">
-                      {tr ? "Alanı aç" : "Open the theme"} <ArrowRight className="size-4" />
+                      {tr ? "Alanı Aç" : "Open the Theme"} <ArrowRight className="size-4" />
                     </span>
                   </Link>
                 </li>
@@ -218,11 +223,11 @@ export function HomePage({ locale }: { locale: Locale }) {
                 {tr ? "Projelerimiz" : "Projects"}
               </p>
               <h2 className="mt-3 max-w-3xl text-4xl">
-                {tr ? "Fikir, planlama, devam eden, tamamlanan." : "Proposal, planning, in progress, completed."}
+                {tr ? "Fikir, Planlama, Devam Eden, Tamamlanan." : "Proposal, Planning, In Progress, Completed."}
               </h2>
             </div>
             <Link href={localePath(locale, "/projelerimiz")} className="inline-flex items-center gap-2 text-sm font-semibold text-gold">
-              {tr ? "Tüm başlıklar" : "All headings"} <ArrowRight className="size-4" />
+              {tr ? "Tüm Başlıklar" : "All Headings"} <ArrowRight className="size-4" />
             </Link>
           </div>
           <p className="mt-4 max-w-3xl text-sm leading-6 text-ivory/75">
@@ -248,10 +253,10 @@ export function HomePage({ locale }: { locale: Locale }) {
         <Container className="grid gap-8 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <p className="text-xs font-semibold tracking-[0.18em] text-teal-ink uppercase">
-              {tr ? "Haberler ve duyurular" : "News and notices"}
+              {tr ? "Haberler ve Duyurular" : "News and Notices"}
             </p>
             <h2 className="mt-3 text-4xl text-navy">
-              {tr ? "Tarihi ve kaynağı belli olanlar." : "Only what has a date and a source."}
+              {tr ? "Tarihi ve Kaynağı Belli Olanlar." : "Only What Has a Date and a Source."}
             </h2>
             <p className="mt-4 text-sm leading-7 text-muted-foreground">
               {tr
@@ -281,7 +286,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             <div className="p-8 sm:p-10">
               <Handshake className="size-8 text-gold" aria-hidden="true" />
               <h2 className="mt-4 text-4xl">
-                {tr ? "Bölgenin potansiyeline birlikte değer katalım." : "Let us add value to the region's potential together."}
+                {tr ? "Bölgenin Potansiyeline Birlikte Değer Katalım." : "Let Us Add Value to the Region's Potential Together."}
               </h2>
               <p className="mt-4 text-sm leading-7 text-ivory/80">
                 {tr
@@ -292,7 +297,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                 href={localePath(locale, "/yatirim-ve-is-birlikleri")}
                 className={cn(buttonVariants({ size: "lg" }), "mt-6 h-12 bg-gold px-5 text-base text-navy hover:bg-gold/90")}
               >
-                {tr ? "İş birliği geliştirin" : "Build cooperation"}
+                {tr ? "İş Birliği Geliştirin" : "Build Cooperation"}
               </Link>
             </div>
             <div className="relative min-h-64">

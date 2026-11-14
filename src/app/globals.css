@@ -7,10 +7,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-montserrat), "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
-  --font-heading: var(--font-newsreader), Georgia, "Times New Roman", serif;
-  --font-display: var(--font-newsreader), Georgia, "Times New Roman", serif;
+  --font-heading: var(--font-montserrat), "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-montserrat), "Inter", ui-sans-serif, system-ui, sans-serif;
   --color-navy: #142b46;
   --color-navy-deep: #0c1c30;
   --color-gold: #c5a96a;
@@ -129,15 +129,18 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-normal;
   }
   html {
     @apply font-sans;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    font-weight: 520;
+    font-weight: 700;
     letter-spacing: -0.02em;
+  }
+  p {
+    font-weight: 400;
   }
 }
 

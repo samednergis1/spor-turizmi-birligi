@@ -72,42 +72,42 @@ export function ui(locale: Locale) {
       ? "Bu sürümde zorunlu olmayan çerez ve ziyaret ölçümü kullanılmıyor. Tercihleriniz yalnızca bu bildirimi kapatmak için tarayıcınızda saklanır."
       : "This version does not use non-essential cookies or visit measurement. Your browser only stores a preference to hide this notice.",
     cookieAction: tr ? "Anladım" : "Understood",
-    cookiePolicy: tr ? "Çerez politikası" : "Cookie policy",
-    privacy: tr ? "Gizlilik" : "Privacy",
-    kvkk: tr ? "KVKK aydınlatma" : "Privacy notice",
+    cookiePolicy: tr ? "Çerez Politikası" : "Cookie Policy",
+    privacy: tr ? "Gizlilik Politikası" : "Privacy Policy",
+    kvkk: tr ? "KVKK Aydınlatma Metni" : "Clarification Text",
     plates: tr ? "Plaka" : "Plate",
     region: tr ? "Bölge" : "Region",
-    relatedSports: tr ? "İlgili spor alanları" : "Related sports themes",
-    relatedCities: tr ? "Bu başlıkla okunabilecek iller" : "Provinces that can be read with this theme",
-    geography: tr ? "Doğal ve coğrafi değerler" : "Natural and geographic assets",
-    sportsPotential: tr ? "Spor turizmi olanakları" : "Sports-tourism possibilities",
-    facilities: tr ? "Tesis ve altyapı" : "Facilities and infrastructure",
-    access: tr ? "Konaklama ve ulaşım" : "Accommodation and transport",
-    events: tr ? "Etkinlik ve organizasyonlar" : "Events",
+    relatedSports: tr ? "İlgili Spor Alanları" : "Related Sports Themes",
+    relatedCities: tr ? "Bu Başlıkla Okunabilecek İller" : "Provinces for This Theme",
+    geography: tr ? "Doğal ve Coğrafi Değerler" : "Natural and Geographic Assets",
+    sportsPotential: tr ? "Spor Turizmi Olanakları" : "Sports Tourism Possibilities",
+    facilities: tr ? "Tesis ve Altyapı" : "Facilities and Infrastructure",
+    access: tr ? "Konaklama ve Ulaşım" : "Accommodation and Transport",
+    events: tr ? "Etkinlik ve Organizasyonlar" : "Events",
     eventsEmpty: tr
       ? "Tarihi ve kaynağı belli bir etkinlik takvimi henüz eklenmedi."
       : "An event calendar with dates and sources has not been added yet.",
-    development: tr ? "Gelişim ve yatırım alanları" : "Development and investment themes",
+    development: tr ? "Gelişim ve Yatırım Alanları" : "Development and Investment Themes",
     gallery: tr ? "Görsel" : "Image",
     galleryNote: tr
       ? "Yer tutucu görsel, ilin kendisine ait bir fotoğraf arşivi değildir. İzinli fotoğraflar ayrıca eklenecektir."
       : "The placeholder image is not a photograph of this province. Licensed photographs will be added separately.",
-    mapLabel: tr ? "İl haritası" : "Province map",
+    mapLabel: tr ? "İl Haritası" : "Province Map",
     mapHint: tr
-      ? "Harita, iki bölgenin illerini gösterir. Kapsama alınacak iller oluşum tarafından netleştirilecektir. Bir ili açmak için noktayı seçin."
-      : "The map shows the provinces of the two regions. Which provinces are in scope will be confirmed by the initiative. Choose a point to open a province.",
+      ? "Harita yalnızca Doğu ve Güneydoğu Anadolu’ya odaklanır. Ayrıntı için bir ile dokunun."
+      : "The map is focused on Eastern and Southeastern Anatolia. Choose a province for details.",
     noResults: tr ? "Bu süzgeçte kayıt yok." : "Nothing matches this filter.",
     purpose: tr ? "Amaç" : "Purpose",
-    audience: tr ? "Hedef kitle" : "Audience",
-    places: tr ? "İlgili yer" : "Place",
+    audience: tr ? "Hedef Kitle" : "Audience",
+    places: tr ? "İlgili Yer" : "Place",
     status: tr ? "Durum" : "Status",
     allStatuses: tr ? "Tümü" : "All",
-    formName: tr ? "Ad soyad" : "Full name",
-    formOrg: tr ? "Kurum veya kuruluş" : "Organisation",
-    formRole: tr ? "Görev veya unvan" : "Role or title",
+    formName: tr ? "Ad Soyad" : "Full Name",
+    formOrg: tr ? "Kurum veya Kuruluş" : "Organisation",
+    formRole: tr ? "Görev veya Unvan" : "Role or Title",
     formEmail: tr ? "E-posta" : "Email",
     formPhone: tr ? "Telefon" : "Phone",
-    formSubject: tr ? "Başvuru konusu" : "Subject",
+    formSubject: tr ? "Başvuru Konusu" : "Subject",
     formMessage: tr ? "Mesaj" : "Message",
     optional: tr ? "isteğe bağlı" : "optional",
     consent: tr
@@ -125,10 +125,10 @@ export function ui(locale: Locale) {
     messageShort: tr ? "Mesajı biraz daha açın." : "Please write a little more.",
     consentRequired: tr ? "Devam etmek için onay gerekli." : "Consent is required to continue.",
     subjects: [
-      { value: "genel", label: tr ? "Genel iletişim" : "General contact" },
-      { value: "yatirim", label: tr ? "Yatırım ve proje önerisi" : "Investment and project proposal" },
-      { value: "isbirligi", label: tr ? "Kurumsal iş birliği" : "Institutional cooperation" },
-      { value: "organizasyon", label: tr ? "Organizasyon ve etkinlik ortaklığı" : "Event partnership" },
+      { value: "genel", label: tr ? "Genel İletişim" : "General Contact" },
+      { value: "yatirim", label: tr ? "Yatırım ve Proje Önerisi" : "Investment and Project Proposal" },
+      { value: "isbirligi", label: tr ? "Kurumsal İş Birliği" : "Institutional Cooperation" },
+      { value: "organizasyon", label: tr ? "Organizasyon ve Etkinlik Ortaklığı" : "Event Partnership" },
     ],
     formDisclaimer: tr
       ? "Bu form bir ön iletişim ve değerlendirme başvurusudur. Başvuru yapılması üyelik, ortaklık, yatırım onayı veya herhangi bir taahhüt anlamına gelmez."
@@ -139,6 +139,6 @@ export function ui(locale: Locale) {
     noEmail: tr
       ? "Kurumsal e-posta, hukukî yapı ve alan adı netleştikten sonra yayımlanacaktır."
       : "A corporate email will be published once the legal structure and domain are settled.",
-    contactChannel: tr ? "İletişim kanalı" : "Contact channel",
+    contactChannel: tr ? "İletişim Kanalı" : "Contact Channel",
   }
 }

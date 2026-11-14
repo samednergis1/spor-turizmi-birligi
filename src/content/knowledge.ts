@@ -10,7 +10,7 @@ export type Article = {
 export const articles: Article[] = [
   {
     slug: "spor-turizmi-nedir",
-    title: { tr: "Spor turizmi nedir?", en: "What is sports tourism?" },
+    title: { tr: "Spor Turizmi Nedir?", en: "What Is Sports Tourism?" },
     summary: {
       tr: "Sporu izlemek, yapmak veya bir yere hazırlanmak için seyahat etmenin; konaklama, ulaşım ve yerel ekonomiyle kurduğu ilişki.",
       en: "How travelling to watch sport, play it or prepare for it relates to lodging, transport and the local economy.",
@@ -33,8 +33,8 @@ export const articles: Article[] = [
   {
     slug: "turkiyede-gelisim",
     title: {
-      tr: "Türkiye'de spor turizminin gelişimi",
-      en: "How sports tourism has developed in Türkiye",
+      tr: "Türkiye'de Spor Turizminin Gelişimi",
+      en: "How Sports Tourism Has Developed in Türkiye",
     },
     summary: {
       tr: "Kıyı, kent ve yüksek alan deneyimlerinin yanına, bölgesel iş birliğiyle büyüyebilecek bir iç Anadolu ve doğu anlatısı eklemek.",
@@ -58,8 +58,8 @@ export const articles: Article[] = [
   {
     slug: "bolgesel-avantajlar",
     title: {
-      tr: "Doğu ve Güneydoğu Anadolu'nun sportif avantajları",
-      en: "Sporting advantages of Eastern and Southeastern Anatolia",
+      tr: "Doğu ve Güneydoğu Anadolu'nun Sportif Avantajları",
+      en: "Sporting Advantages of Eastern and Southeastern Anatolia",
     },
     summary: {
       tr: "Yükseklik, kar, büyük göller, vadiler ve yaşayan kültürel sporlar aynı bölge ailesinde buluşur.",
@@ -83,8 +83,8 @@ export const articles: Article[] = [
   {
     slug: "potansiyel-raporlari",
     title: {
-      tr: "Bölgesel potansiyel nasıl raporlanır?",
-      en: "How should regional potential be reported?",
+      tr: "Bölgesel Potansiyel Nasıl Raporlanır?",
+      en: "How Should Regional Potential Be Reported?",
     },
     summary: {
       tr: "Kaynak, tarih, yöntem ve sınır. Potansiyel cümlesi bu dördü olmadan rapora dönüşmez.",
@@ -104,8 +104,8 @@ export const articles: Article[] = [
   {
     slug: "yatirim-rehberi",
     title: {
-      tr: "Spor turizmi yatırım rehberi",
-      en: "A guide to sports-tourism investment",
+      tr: "Spor Turizmi Yatırım Rehberi",
+      en: "Sports Tourism Investment Guide",
     },
     summary: {
       tr: "Yatırım konuşması; yer, mevsim, işletme modeli ve taşıma kapasitesi bilinmeden başlamamalı.",
@@ -129,8 +129,8 @@ export const articles: Article[] = [
   {
     slug: "organizasyon-rehberi",
     title: {
-      tr: "Spor organizasyonu düzenleme rehberi",
-      en: "A guide to organising a sports event",
+      tr: "Spor Organizasyonu Düzenleme Rehberi",
+      en: "Guide to Organising a Sports Event",
     },
     summary: {
       tr: "Küçük bir açık hava buluşması bile izin, güvenlik, sigorta ve açık bir iptal kuralı ister.",

@@ -15,7 +15,7 @@ const draft: Copy = {
 export const legalPages: LegalPage[] = [
   {
     slug: "gizlilik",
-    title: { tr: "Gizlilik", en: "Privacy" },
+    title: { tr: "Gizlilik Politikası", en: "Privacy Policy" },
     description: {
       tr: "Bu sürüme ait gizlilik taslağı. Form verisi sunucuda saklanmaz.",
       en: "The privacy draft for this version. Form data is not stored on a server.",
@@ -38,7 +38,7 @@ export const legalPages: LegalPage[] = [
   },
   {
     slug: "kvkk",
-    title: { tr: "KVKK aydınlatma taslağı", en: "Privacy notice draft" },
+    title: { tr: "KVKK Aydınlatma Metni", en: "Clarification Text" },
     description: {
       tr: "6698 sayılı Kanun bakımından yayın öncesi aydınlatma taslağı.",
       en: "A pre-publication privacy notice draft in light of Law No. 6698.",
@@ -61,7 +61,7 @@ export const legalPages: LegalPage[] = [
   },
   {
     slug: "cerez-politikasi",
-    title: { tr: "Çerez politikası", en: "Cookie policy" },
+    title: { tr: "Çerez Politikası", en: "Cookie Policy" },
     description: {
       tr: "Bu sürümde ölçüm çerezi yoktur. Bildirim tercihi yerelde saklanır.",
       en: "This version has no measurement cookie. The notice preference is stored locally.",

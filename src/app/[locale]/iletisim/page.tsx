@@ -36,24 +36,22 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       <PageHero
         locale={locale}
         eyebrow={tr ? "İletişim" : "Contact"}
-        title={tr ? "Önce kanal, sonra adres." : "The channel first, the address later."}
-        lede={labels.noAddress}
+        title={tr ? "İletişim" : "Contact"}
+        lede={tr ? "Form hemen aşağıda." : "The form is just below."}
         crumbs={[
           { href: localePath(locale), label: tr ? "Ana Sayfa" : "Home" },
           { label: tr ? "İletişim" : "Contact" },
         ]}
       />
-      <Container className="grid gap-8 py-14 lg:grid-cols-12">
-        <aside className="space-y-4 lg:col-span-4">
-          <h2 className="text-2xl text-navy">{labels.contactChannel}</h2>
-          <p className="text-sm leading-7 text-muted-foreground">{labels.noEmail}</p>
-          <p className="text-sm leading-7 text-muted-foreground">{labels.noAddress}</p>
-        </aside>
-        <div className="lg:col-span-8">
-          <Suspense fallback={<div className="h-40 rounded-3xl bg-muted" />}>
-            <ContactForm locale={locale} />
-          </Suspense>
-        </div>
+      <Container className="py-8 sm:py-10">
+        <Suspense fallback={<div className="h-40 rounded-3xl bg-muted" />}>
+          <ContactForm locale={locale} />
+        </Suspense>
+        <details className="mt-6 rounded-2xl border border-border bg-card p-4">
+          <summary className="cursor-pointer text-sm font-semibold text-navy">{labels.contactChannel}</summary>
+          <p className="mt-3 text-sm leading-7 text-muted-foreground">{labels.noEmail}</p>
+          <p className="mt-2 text-sm leading-7 text-muted-foreground">{labels.noAddress}</p>
+        </details>
       </Container>
     </>
   )

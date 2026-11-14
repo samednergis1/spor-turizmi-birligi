@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { cn } from "cn"
 import { Container } from "@/components/layout/container"
 import { Breadcrumbs } from "@/components/layout/breadcrumbs"
 import type { Locale } from "@/lib/locale"
@@ -11,6 +12,7 @@ export function PageHero({
   image,
   imageAlt,
   crumbs,
+  titleClassName,
 }: {
   locale: Locale
   eyebrow?: string
@@ -19,6 +21,7 @@ export function PageHero({
   image?: string
   imageAlt?: string
   crumbs: { href?: string; label: string }[]
+  titleClassName?: string
 }) {
   return (
     <section className="relative overflow-hidden border-b border-border bg-navy text-ivory">
@@ -40,7 +43,9 @@ export function PageHero({
             {eyebrow}
           </p>
         ) : null}
-        <h1 className="mt-3 max-w-4xl text-4xl leading-tight text-ivory sm:text-5xl">{title}</h1>
+        <h1 className={cn("mt-3 max-w-4xl text-4xl leading-tight text-ivory sm:text-5xl", titleClassName)}>
+          {title}
+        </h1>
         {lede ? <p className="mt-4 max-w-2xl text-base leading-7 text-ivory/85 sm:text-lg">{lede}</p> : null}
       </Container>
     </section>

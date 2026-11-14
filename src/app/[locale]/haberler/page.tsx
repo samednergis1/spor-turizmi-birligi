@@ -35,7 +35,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       <PageHero
         locale={locale}
         eyebrow={tr ? "Haberler ve Duyurular" : "News and Notices"}
-        title={tr ? "Kaynaksız cümle haber olmaz." : "A sentence without a source is not news."}
+        title={tr ? "Kaynaksız Cümle Haber Olmaz." : "A Sentence Without a Source Is Not News."}
         lede={
           tr
             ? "Kategoriler hazır. İçerik, ancak tarih ve kaynak birlikte yazılabildiğinde eklenir."

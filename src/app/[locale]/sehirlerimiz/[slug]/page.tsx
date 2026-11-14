@@ -2,12 +2,12 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import { CityAccordions } from "@/components/cities/city-accordions"
 import { Container } from "@/components/layout/container"
 import { PageHero } from "@/components/layout/page-hero"
 import {
   accessNote,
   cities,
-  citiesByRegion,
   facilityNote,
   getCity,
   getRegion,
@@ -78,17 +78,7 @@ export default async function Page({
           ]}
         />
         <Container className="py-14">
-          <p className="max-w-3xl text-sm leading-7 text-muted-foreground">{tx(verificationNote, locale)}</p>
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {citiesByRegion(region.id).map((item) => (
-              <li key={item.slug}>
-                <Link href={localePath(locale, `/sehirlerimiz/${item.slug}`)} className="block h-full rounded-3xl border border-border bg-card p-5 hover:border-teal">
-                  <h2 className="text-2xl text-navy">{item.name}</h2>
-                  <p className="mt-2 text-sm leading-6 text-muted-foreground">{tx(item.summary, locale)}</p>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <CityAccordions locale={locale} region={region.id} />
         </Container>
       </>
     )

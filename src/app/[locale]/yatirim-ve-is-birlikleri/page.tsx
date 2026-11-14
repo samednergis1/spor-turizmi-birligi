@@ -11,18 +11,18 @@ import { pageMetadata } from "@/lib/seo"
 const kinds = [
   {
     konu: "yatirim",
-    tr: ["Yatırım ve proje önerisi", "Tesis, kamp, ekipman veya organizasyon fikrini ön görüşmeye açmak."],
-    en: ["Investment and project proposal", "Open an idea for a facility, camp, equipment or event to an early conversation."],
+    tr: ["Yatırım ve Proje Önerisi", "Tesis, kamp, ekipman veya organizasyon fikrini ön görüşmeye açmak."],
+    en: ["Investment and Project Proposal", "Open an idea for a facility, camp, equipment or event to an early conversation."],
   },
   {
     konu: "isbirligi",
-    tr: ["Kurumsal iş birliği", "Kurumunuzun bölgesel ağ ile nasıl konuşabileceğini yazmak."],
-    en: ["Institutional cooperation", "Describe how your organisation might speak with the regional network."],
+    tr: ["Kurumsal İş Birliği", "Kurumunuzun bölgesel ağ ile nasıl konuşabileceğini yazmak."],
+    en: ["Institutional Cooperation", "Describe how your organisation might speak with the regional network."],
   },
   {
     konu: "organizasyon",
-    tr: ["Organizasyon ve etkinlik ortaklığı", "Bir buluşma, kamp veya gösteri için ev sahibi ya da içerik ortağı aramak."],
-    en: ["Event partnership", "Look for a host or content partner for a gathering, camp or display."],
+    tr: ["Organizasyon ve Etkinlik Ortaklığı", "Bir buluşma, kamp veya gösteri için ev sahibi ya da içerik ortağı aramak."],
+    en: ["Event Partnership", "Look for a host or content partner for a gathering, camp or display."],
   },
 ] as const
 
@@ -53,12 +53,8 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       <PageHero
         locale={locale}
         eyebrow={tr ? "Yatırım ve İş Birlikleri" : "Investment and Cooperation"}
-        title={tr ? "Bölgenin Potansiyeline Birlikte Değer Katıyoruz." : "Adding value to the region's potential together."}
-        lede={
-          tr
-            ? "Doğu ve Güneydoğu Anadolu, spor turizmi alanında geliştirilebilecek önemli fırsatlara sahiptir. Spor tesisleri, konaklama altyapısı, kamp merkezleri, doğa sporları alanları ve organizasyonlar gibi başlıklarda yeni iş birlikleri geliştirilebilir."
-            : "Eastern and Southeastern Anatolia holds important opportunities that can be developed in sports tourism. New cooperation can be explored around sports facilities, accommodation, camp centres, nature-sports places and events."
-        }
+        title={tr ? "Bölgenin Potansiyeline Birlikte Değer Katıyoruz." : "Adding Value to the Region's Potential Together."}
+        lede={tr ? "Üç başvuru türünden birini seçin." : "Choose one of the three request types."}
         image="/images/tas-sehir.jpg"
         imageAlt={tr ? "Taş kent ve ova" : "A stone city and the plain"}
         crumbs={[
@@ -67,11 +63,14 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         ]}
       />
       <Container className="space-y-12 py-14">
-        <p className="max-w-3xl text-base leading-8 text-navy/85">
-          {tr
-            ? "Birlik olarak kamu kurumları, yerel yönetimler, özel sektör temsilcileri, spor kuruluşları ve yatırımcılar arasında iletişim kurulmasını ve ortak çalışma fırsatlarının değerlendirilmesini destekliyoruz. Bu sayfa getiri, arsa veya teşvik vaat etmez."
-            : "As a union we support contact among public institutions, local governments, private-sector representatives, sports organisations and investors, and the review of opportunities to work together. This page does not promise a return, land or an incentive."}
-        </p>
+        <details className="max-w-3xl text-sm leading-7 text-navy/80">
+          <summary className="cursor-pointer font-semibold text-navy">{tr ? "Kısa Not" : "A Short Note"}</summary>
+          <p className="mt-3">
+            {tr
+              ? "Kamu, yerel yönetim, spor kuruluşları ve yatırımcılar arasında ön iletişim desteklenir. Bu sayfa getiri, arsa veya teşvik vaat etmez."
+              : "Early contact among public bodies, local government, sports organisations and investors is supported. This page does not promise a return, land or an incentive."}
+          </p>
+        </details>
         <ul className="grid gap-4 md:grid-cols-3">
           {kinds.map((kind) => {
             const [title, body] = kind[locale]
@@ -89,7 +88,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
           })}
         </ul>
         <div id="basvuru">
-          <h2 className="text-3xl text-navy">{tr ? "Ön başvuru" : "Early request"}</h2>
+          <h2 className="text-3xl text-navy">{tr ? "Ön Başvuru" : "Early Request"}</h2>
           <div className="mt-6">
             <Suspense fallback={<div className="h-40 rounded-3xl bg-muted" />}>
               <ContactForm locale={locale} />

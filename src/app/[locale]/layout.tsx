@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Newsreader, Outfit } from "next/font/google"
+import { Montserrat } from "next/font/google"
 import { notFound } from "next/navigation"
 import { CookieNotice } from "@/components/layout/cookie-notice"
 import { Footer } from "@/components/layout/footer"
@@ -11,15 +11,10 @@ import { rootMetadata } from "@/lib/seo"
 import { siteName, siteUrl } from "@/lib/site"
 import "../globals.css"
 
-const outfit = Outfit({
+const montserrat = Montserrat({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-outfit",
-  display: "swap",
-})
-
-const newsreader = Newsreader({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-newsreader",
+  weight: ["400", "600", "700"],
+  variable: "--font-montserrat",
   display: "swap",
 })
 
@@ -49,7 +44,7 @@ export default async function RootLayout({
   const labels = ui(locale)
 
   return (
-    <html lang={locale} className={`${outfit.variable} ${newsreader.variable} h-full antialiased`}>
+    <html lang={locale} className={`${montserrat.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-background text-foreground">
         <a
           href="#icerik"

@@ -10,42 +10,47 @@ export function RegionMap({ locale }: { locale: Locale }) {
     <div>
       <p className="mb-4 max-w-3xl text-sm leading-6 text-muted-foreground">{labels.mapHint}</p>
       <div className="overflow-hidden rounded-3xl border border-border bg-card">
-        <div className="relative aspect-[780/560] w-full bg-[radial-gradient(circle_at_30%_30%,#e7f6f6,transparent_42%),linear-gradient(#f7f1e4,#e7eef5)]">
-          <svg viewBox="0 0 780 560" className="absolute inset-0 h-full w-full" aria-hidden="true">
+        <div className="relative aspect-[780/560] w-full bg-[radial-gradient(circle_at_72%_18%,#e7f6f6,transparent_34%),linear-gradient(#f4efe4,#e4eef4)]">
+          <svg
+            viewBox="0 0 780 560"
+            className="absolute inset-0 h-full w-full"
+            role="img"
+            aria-label={labels.mapLabel}
+          >
             <path
-              d="M150 120 C220 70 360 80 470 130 C560 170 620 150 700 210 C650 280 600 340 520 390 C430 430 300 400 230 340 C170 280 120 190 150 120Z"
+              d="M140 250 L160 160 L300 110 L500 40 L650 40 L760 140 L770 220 L740 340 L700 450 L560 390 L480 360 L380 360 L250 370 L120 340 L120 280 Z"
               fill="#142B46"
-              opacity="0.08"
-            />
-            <path
-              d="M40 390 C120 340 220 360 300 410 C360 450 300 530 180 530 C90 520 30 470 40 390Z"
-              fill="#C5A96A"
-              opacity="0.18"
-            />
-            <path
-              d="M40 48c80 18 150-10 210 24"
-              fill="none"
+              opacity="0.16"
               stroke="#142B46"
-              strokeWidth="8"
-              strokeLinecap="round"
-              opacity="0.35"
+              strokeWidth="3"
+              strokeLinejoin="round"
             />
             <path
-              d="M70 78c90 22 160-6 230 28"
-              fill="none"
-              stroke="#C5A96A"
-              strokeWidth="6"
-              strokeLinecap="round"
+              d="M40 470 L70 400 L160 350 L250 340 L400 340 L520 350 L600 390 L640 450 L560 500 L400 530 L200 540 L40 530 L20 480 Z"
+              fill="#C5A96A"
+              opacity="0.42"
+              stroke="#A78B4A"
+              strokeWidth="3"
+              strokeLinejoin="round"
             />
+            <text x="360" y="150" fill="#142B46" fontSize="18" fontWeight="700" fontFamily="Montserrat, sans-serif">
+              {locale === "tr" ? "Doğu Anadolu" : "Eastern Anatolia"}
+            </text>
+            <text x="180" y="470" fill="#142B46" fontSize="16" fontWeight="700" fontFamily="Montserrat, sans-serif">
+              {locale === "tr" ? "Güneydoğu Anadolu" : "Southeastern Anatolia"}
+            </text>
           </svg>
-          <ul className="absolute inset-0 m-0 list-none p-0" aria-label={labels.mapLabel}>
+          <ul className="absolute inset-0 m-0 list-none p-0">
             {cities.map((city) => {
               const region = regions.find((item) => item.id === city.region)
               return (
                 <li
                   key={city.slug}
                   className="absolute -translate-x-1/2 -translate-y-1/2"
-                  style={{ left: `${(city.x / 780) * 100}%`, top: `${(city.y / 560) * 100}%` }}
+                  style={{
+                    left: `${(city.x / 780) * 100}%`,
+                    top: `${(city.y / 560) * 100}%`,
+                  }}
                 >
                   <Link
                     href={localePath(locale, `/sehirlerimiz/${city.slug}`)}

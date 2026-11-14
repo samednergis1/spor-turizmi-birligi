@@ -1,10 +1,11 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import { CityAccordions } from "@/components/cities/city-accordions"
 import { Container } from "@/components/layout/container"
 import { PageHero } from "@/components/layout/page-hero"
 import { RegionMap } from "@/components/map/region-map"
-import { citiesByRegion, regions, verificationNote } from "@/content/cities"
+import { regions } from "@/content/cities"
 import { isLocale, localePath, tx } from "@/lib/locale"
 import { pageMetadata } from "@/lib/seo"
 
@@ -35,8 +36,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       <PageHero
         locale={locale}
         eyebrow={tr ? "Şehirlerimiz" : "Our Cities"}
-        title={tr ? "Her il için aynı şablon." : "The same template for every province."}
-        lede={tx(verificationNote, locale)}
+        title={tr ? "Her İl İçin Uygun Şablon." : "A Fitting Template for Every Province."}
+        titleClassName="text-5xl sm:text-6xl lg:text-7xl"
+        lede={tr ? "Ayrıntı için ilin adına dokunun." : "Tap a province name for the details."}
         image="/images/tas-sehir.jpg"
         imageAlt={tr ? "Altın ışıkta taş bir kent" : "A stone city in golden light"}
         crumbs={[
@@ -51,23 +53,12 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
             <div className="flex flex-wrap items-end justify-between gap-3">
               <h2 className="text-3xl text-navy">{tx(region.title, locale)}</h2>
               <Link href={localePath(locale, `/sehirlerimiz/${region.slug}`)} className="text-sm font-semibold text-teal-ink hover:underline">
-                {tr ? "Bölge sayfası" : "Region page"}
+                {tr ? "Bölge Sayfası" : "Region Page"}
               </Link>
             </div>
-            <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {citiesByRegion(region.id).map((city) => (
-                <li key={city.slug}>
-                  <Link
-                    href={localePath(locale, `/sehirlerimiz/${city.slug}`)}
-                    className="block h-full rounded-2xl border border-border bg-card p-4 hover:border-teal"
-                  >
-                    <span className="text-xs font-semibold text-muted-foreground">{city.plate}</span>
-                    <span className="mt-1 block font-display text-2xl text-navy">{city.name}</span>
-                    <span className="mt-2 block text-sm leading-6 text-muted-foreground">{tx(city.summary, locale)}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="mt-4">
+              <CityAccordions locale={locale} region={region.id} />
+            </div>
           </section>
         ))}
       </Container>

@@ -65,25 +65,22 @@ export function Footer({ locale }: { locale: Locale }) {
           </div>
           <div>
             <h2 className="text-sm font-semibold tracking-wide text-gold uppercase">
-              {tr ? "Metinler" : "Notices"}
+              {tr ? "Bilgilendirme" : "Information"}
             </h2>
             <ul className="mt-3 space-y-2 text-sm">
               <li>
-                <Link href={localePath(locale, "/gizlilik")} className="text-ivory/85 hover:text-gold">
-                  {tr ? "Gizlilik" : "Privacy"}
-                </Link>
-              </li>
-              <li>
                 <Link href={localePath(locale, "/kvkk")} className="text-ivory/85 hover:text-gold">
-                  {tr ? "KVKK aydınlatma" : "Privacy notice"}
+                  {tr ? "KVKK Aydınlatma Metni" : "Clarification Text"}
                 </Link>
               </li>
               <li>
-                <Link
-                  href={localePath(locale, "/cerez-politikasi")}
-                  className="text-ivory/85 hover:text-gold"
-                >
-                  {tr ? "Çerez politikası" : "Cookie policy"}
+                <Link href={localePath(locale, "/cerez-politikasi")} className="text-ivory/85 hover:text-gold">
+                  {tr ? "Çerez Politikası" : "Cookie Policy"}
+                </Link>
+              </li>
+              <li>
+                <Link href={localePath(locale, "/gizlilik")} className="text-ivory/85 hover:text-gold">
+                  {tr ? "Gizlilik Politikası" : "Privacy Policy"}
                 </Link>
               </li>
             </ul>
@@ -93,7 +90,7 @@ export function Footer({ locale }: { locale: Locale }) {
       <Container className="pb-10">
         <div className="rounded-2xl border border-gold/50 bg-navy-deep/70 p-5 sm:p-6">
           <p className="text-xs font-semibold tracking-[0.16em] text-gold uppercase">
-            {tr ? "Hukuki durum" : "Legal status"}
+            {tr ? "Hukuki Durum" : "Legal Status"}
           </p>
           {!tr ? (
             <p className="mt-2 text-xs text-ivory/60">

@@ -15,7 +15,7 @@ export type Project = {
 export const projectStatusLabel: Record<ProjectStatus, Copy> = {
   fikir: { tr: "Proje önerisi", en: "Proposal" },
   planlama: { tr: "Planlama", en: "Planning" },
-  devam: { tr: "Devam ediyor", en: "In progress" },
+  devam: { tr: "Devam Ediyor", en: "In Progress" },
   tamamlandi: { tr: "Tamamlandı", en: "Completed" },
 }
 

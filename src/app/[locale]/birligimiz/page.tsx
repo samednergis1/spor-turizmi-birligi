@@ -8,7 +8,7 @@ import { pageMetadata } from "@/lib/seo"
 
 const principles = [
   {
-    tr: ["İş birliği", "Ortak hedefler doğrultusunda birlikte hareket etmek."],
+    tr: ["İş Birliği", "Ortak hedefler doğrultusunda birlikte hareket etmek."],
     en: ["Cooperation", "Moving together toward shared goals."],
   },
   {
@@ -16,8 +16,8 @@ const principles = [
     en: ["Sustainability", "Developing while protecting natural and cultural assets."],
   },
   {
-    tr: ["Bölgesel kalkınma", "Spor turizmini ekonomik ve sosyal gelişim aracı olarak değerlendirmek."],
-    en: ["Regional development", "Treating sports tourism as a tool for economic and social development."],
+    tr: ["Bölgesel Kalkınma", "Spor turizmini ekonomik ve sosyal gelişim aracı olarak değerlendirmek."],
+    en: ["Regional Development", "Treating sports tourism as a tool for economic and social development."],
   },
   {
     tr: ["Erişilebilirlik", "Farklı şehirleri ve paydaşları ortak platformda buluşturmak."],
@@ -29,18 +29,18 @@ const principles = [
   },
   {
     tr: ["Uluslararasılaşma", "Bölgenin potansiyelini farklı pazarlara tanıtmak."],
-    en: ["International outlook", "Presenting the region's potential to different markets."],
+    en: ["International Outlook", "Presenting the region's potential to different markets."],
   },
 ] as const
 
 const stakeholders = [
-  ["Yerel yönetimler", "Local governments"],
-  ["Kamu kurumları", "Public institutions"],
-  ["Spor kulüpleri ve spor kuruluşları", "Sports clubs and sports organisations"],
+  ["Yerel Yönetimler", "Local Governments"],
+  ["Kamu Kurumları", "Public Institutions"],
+  ["Spor Kulüpleri ve Spor Kuruluşları", "Sports Clubs and Sports Organisations"],
   ["Üniversiteler", "Universities"],
-  ["Turizm paydaşları", "Tourism stakeholders"],
+  ["Turizm Paydaşları", "Tourism Stakeholders"],
   ["Yatırımcılar", "Investors"],
-  ["Sivil toplum", "Civil society"],
+  ["Sivil Toplum", "Civil Society"],
 ] as const
 
 export async function generateMetadata({
@@ -72,7 +72,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       <PageHero
         locale={locale}
         eyebrow={tr ? "Birliğimiz" : "The Union"}
-        title={tr ? "Paydaşların gönüllü iş birliği platformu." : "A voluntary cooperation platform of stakeholders."}
+        title={tr ? "Paydaşların Gönüllü İş Birliği Platformu." : "A Voluntary Cooperation Platform of Stakeholders."}
         lede={
           tr
             ? "Spor turizmini yalnızca organizasyon değil, şehirlerin ekonomik ve sosyal gelişimine katkı sunan stratejik bir alan olarak görüyoruz."
@@ -87,7 +87,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       />
       <Container className="space-y-16 py-14">
         <section id="hakkimizda" className="grid gap-8 lg:grid-cols-12">
-          <h2 className="text-3xl text-navy lg:col-span-4">{tr ? "Hakkımızda" : "About"}</h2>
+          <h2 className="text-3xl text-navy lg:col-span-4">{tr ? "Hakkımızda" : "About Us"}</h2>
           <div className="space-y-4 text-base leading-8 text-navy/85 lg:col-span-8">
             <p>
               {tr
@@ -127,7 +127,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         </section>
 
         <section id="ilkeler">
-          <h2 className="text-3xl text-navy">{tr ? "Temel ilkelerimiz" : "Principles"}</h2>
+          <h2 className="text-3xl text-navy">{tr ? "Temel İlkelerimiz" : "Our Principles"}</h2>
           <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {principles.map((item) => {
               const [title, body] = item[locale]
@@ -143,7 +143,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
         <section id="organizasyon" className="grid gap-8 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <h2 className="text-3xl text-navy">{tr ? "Organizasyon yapımız" : "How we are organised"}</h2>
+            <h2 className="text-3xl text-navy">{tr ? "Organizasyon Yapımız" : "How We Are Organised"}</h2>
             <p className="mt-4 text-sm leading-7 text-muted-foreground">
               {tr
                 ? "Kişi ve unvan bilgileri teyit edilmeden yayımlanmaz. Aşağıdaki halkalar, hedeflenen paydaş çevresini gösterir; resmî üyelik veya yetki listesi değildir."
@@ -160,7 +160,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         </section>
 
         <aside className="rounded-3xl border border-gold/60 bg-card p-6">
-          <h2 className="text-2xl text-navy">{tr ? "Hukuki durum" : "Legal status"}</h2>
+          <h2 className="text-2xl text-navy">{tr ? "Hukuki Durum" : "Legal Status"}</h2>
           <p className="mt-3 text-sm leading-7 text-navy">{legalNotice}</p>
           {!tr ? <p className="mt-3 text-sm leading-7 text-muted-foreground">{legalNoticeEn}</p> : null}
         </aside>
