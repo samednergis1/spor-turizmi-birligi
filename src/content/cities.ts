@@ -10,6 +10,7 @@ export type City = {
   x: number
   y: number
   themes: string[]
+  image?: string
   summary: Copy
   geography: Copy
   sports: Copy
@@ -428,6 +429,7 @@ export const cities: City[] = [
     x: 173,
     y: 392,
     themes: ["doga-ve-macera", "yuksek-irtifa", "geleneksel-sporlar"],
+    image: "/images/cities/adiyaman.jpg",
     summary: {
       tr: "Adıyaman, Nemrut Dağı ve Fırat havzasıyla kültür, doğa ve yüksek alan yürüyüşlerinin birlikte düşünülebileceği bir ildir.",
       en: "Adıyaman, with Mount Nemrut and the Euphrates basin, is a province where culture, nature and high walking can be considered together.",
@@ -453,6 +455,7 @@ export const cities: City[] = [
     x: 428,
     y: 381,
     themes: ["su-sporlari", "doga-ve-macera", "kamp-ve-outdoor"],
+    image: "/images/cities/batman.jpg",
     summary: {
       tr: "Batman, Dicle havzası ve çevresindeki eşiklerle su ve doğa sporları açısından değerlendirilebilecek bir konumdadır.",
       en: "Batman sits on the Tigris basin and nearby thresholds, a position that can be assessed for water and nature sports.",
@@ -478,6 +481,7 @@ export const cities: City[] = [
     x: 348,
     y: 378,
     themes: ["geleneksel-sporlar", "doga-ve-macera", "su-sporlari"],
+    image: "/images/cities/diyarbakir.jpg",
     summary: {
       tr: "Diyarbakır, surları, Hevsel Bahçeleri ve Dicle kıyısıyla kültürel miras ile açık alan kullanımının iç içe geçtiği bir merkezdir.",
       en: "Diyarbakır is a centre where heritage and open space meet, through its walls, the Hevsel Gardens and the Tigris bank.",
@@ -503,6 +507,7 @@ export const cities: City[] = [
     x: 92,
     y: 457,
     themes: ["geleneksel-sporlar", "kamp-ve-outdoor"],
+    image: "/images/cities/gaziantep.jpg",
     summary: {
       tr: "Gaziantep, mutfak kültürü, müzeleri ve kent ölçeğiyle büyük buluşmalar açısından Güneydoğu'nun güçlü merkezlerindendir. Tesis kapasitesi bu sayfada beyan edilmez.",
       en: "Through its food culture, museums and urban scale, Gaziantep is one of Southeastern Anatolia's strong centres for large gatherings. Facility capacity is not stated here.",
@@ -528,6 +533,7 @@ export const cities: City[] = [
     x: 69,
     y: 490,
     themes: ["doga-ve-macera", "kamp-ve-outdoor", "geleneksel-sporlar"],
+    image: "/images/cities/kilis.jpg",
     summary: {
       tr: "Kilis, sınır konumu ve küçük ölçekli kent dokusuyla toplum temelli spor etkinlikleri için sakin bir ölçek sunar.",
       en: "Kilis offers a quiet scale for community sports events, through its border position and small-city fabric.",
@@ -553,6 +559,7 @@ export const cities: City[] = [
     x: 393,
     y: 434,
     themes: ["geleneksel-sporlar", "doga-ve-macera", "kamp-ve-outdoor"],
+    image: "/images/cities/mardin.jpg",
     summary: {
       tr: "Mardin, taş mimarisi ve Mezopotamya eşiğiyle kültür turizminin güçlü adreslerindendir. Geleneksel sporlar, kültürel etkinliklerle ölçülü biçimde buluşabilir.",
       en: "Mardin is a strong address for cultural tourism through its stone architecture and Mesopotamian threshold. Traditional sports can meet cultural events in a measured way.",
@@ -578,6 +585,7 @@ export const cities: City[] = [
     x: 501,
     y: 376,
     themes: ["doga-ve-macera", "kamp-ve-outdoor", "su-sporlari"],
+    image: "/images/cities/siirt.jpg",
     summary: {
       tr: "Siirt, içerik dosyasında doğa ve macera sporları başlığıyla örneklenen iller arasındadır. Vadi, dağ ve kırsal doku bu okumanın zeminini oluşturur.",
       en: "Siirt is one of the provinces cited in the brief under nature and adventure sports. Valleys, mountains and rural fabric are the ground of that reading.",
@@ -603,6 +611,7 @@ export const cities: City[] = [
     x: 218,
     y: 448,
     themes: ["geleneksel-sporlar", "doga-ve-macera", "kamp-ve-outdoor"],
+    image: "/images/cities/sanliurfa.jpg",
     summary: {
       tr: "Şanlıurfa, Göbeklitepe başta olmak üzere erken tarih izlerini taşıyan bir kültür odağıdır. Geleneksel sporlar ve açık alan etkinlikleri, kültür rotalarıyla yan yana düşünülebilir.",
       en: "Şanlıurfa is a cultural focus of early history, notably Göbeklitepe. Traditional sports and outdoor events can sit beside culture routes.",
@@ -628,6 +637,7 @@ export const cities: City[] = [
     x: 547,
     y: 414,
     themes: ["doga-ve-macera", "yuksek-irtifa", "kamp-ve-outdoor"],
+    image: "/images/cities/sirnak.jpg",
     summary: {
       tr: "Şırnak, dağlık eşikler ve vadilerle doğa, yüksek irtifa ve kamp temelli faaliyetler açısından incelenebilecek bir coğrafyaya sahiptir.",
       en: "Şırnak has mountainous thresholds and valleys that can be studied for nature, altitude and camp-based activities.",
@@ -653,6 +663,10 @@ export function getRegion(slug: string) {
 
 export function getCity(slug: string) {
   return cities.find((city) => city.slug === slug)
+}
+
+export function cityImage(city: City) {
+  return city.image ?? regions.find((region) => region.id === city.region)?.image ?? "/images/tas-sehir.jpg"
 }
 
 export function citiesByRegion(region: RegionId) {

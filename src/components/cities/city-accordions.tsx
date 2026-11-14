@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { CityPhoto } from "@/components/cities/city-photo"
 import {
   Accordion,
   AccordionContent,
@@ -33,6 +34,7 @@ export function CityAccordions({
           </AccordionTrigger>
           <AccordionContent>
             <div className="space-y-3 pb-3 text-sm leading-6 text-navy/85">
+              <CityPhoto city={city} locale={locale} className="rounded-xl" />
               <p>{tx(city.summary, locale)}</p>
               <p>
                 <span className="font-semibold text-navy">{labels.geography}. </span>

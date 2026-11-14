@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
-import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { CityAccordions } from "@/components/cities/city-accordions"
+import { CityPhoto } from "@/components/cities/city-photo"
 import { Container } from "@/components/layout/container"
 import { PageHero } from "@/components/layout/page-hero"
 import {
@@ -95,8 +95,8 @@ export default async function Page({
         eyebrow={regionMeta ? tx(regionMeta.title, locale) : undefined}
         title={city.name}
         lede={tx(city.summary, locale)}
-        image={regionMeta?.image}
-        imageAlt={regionMeta ? tx(regionMeta.imageAlt, locale) : city.name}
+        image={city.image ?? regionMeta?.image}
+        imageAlt={city.image ? city.name : regionMeta ? tx(regionMeta.imageAlt, locale) : city.name}
         crumbs={[
           { href: home, label: tr ? "Ana Sayfa" : "Home" },
           { href: citiesHref, label: tr ? "Şehirlerimiz" : "Our Cities" },
@@ -120,14 +120,12 @@ export default async function Page({
         </div>
         <aside className="space-y-6 lg:col-span-4">
           <div className="overflow-hidden rounded-3xl border border-border bg-card">
-            {regionMeta ? (
-              <div className="relative h-44">
-                <Image src={regionMeta.image} alt="" fill sizes="400px" className="object-cover" />
-              </div>
-            ) : null}
+            <CityPhoto city={city} locale={locale} className="rounded-none" sizes="400px" />
             <div className="p-5">
               <p className="text-xs font-semibold tracking-wide text-teal-ink uppercase">{labels.gallery}</p>
-              <p className="mt-2 text-sm leading-6 text-muted-foreground">{labels.galleryNote}</p>
+              {city.image ? null : (
+                <p className="mt-2 text-sm leading-6 text-muted-foreground">{labels.galleryNote}</p>
+              )}
               <dl className="mt-4 space-y-2 text-sm">
                 <div className="flex justify-between gap-4">
                   <dt className="text-muted-foreground">{labels.plates}</dt>
