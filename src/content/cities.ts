@@ -79,6 +79,7 @@ export const cities: City[] = [
     x: 601,
     y: 207,
     themes: ["yuksek-irtifa", "doga-ve-macera", "kis-sporlari"],
+    image: "/images/cities/agri.jpg",
     summary: {
       tr: "Ağrı, Türkiye'nin en yüksek dağlık kütlelerinden birinin eteğinde yer alır. Yüksek irtifa, sert kış ve açık arazi; performans kampları ile doğa sporları için incelenebilecek bir coğrafya sunar.",
       en: "Ağrı stands at the foot of one of Türkiye's highest mountain massifs. Altitude, a hard winter and open country offer geography worth studying for performance camps and nature sports.",
@@ -104,6 +105,7 @@ export const cities: City[] = [
     x: 569,
     y: 77,
     themes: ["kis-sporlari", "doga-ve-macera", "kamp-ve-outdoor"],
+    image: "/images/cities/ardahan.jpg",
     summary: {
       tr: "Ardahan, yüksek plato ve uzun kış mevsimiyle öne çıkan bir sınır ilidir. Açık arazi; kış sporları ve doğa temelli etkinlikler için saha araştırmasına uygundur.",
       en: "Ardahan is a border province known for its high plateau and long winter. Open country suits field research for winter sports and nature-based events.",
@@ -129,6 +131,7 @@ export const cities: City[] = [
     x: 372,
     y: 286,
     themes: ["doga-ve-macera", "su-sporlari", "kamp-ve-outdoor"],
+    image: "/images/cities/bingol.jpg",
     summary: {
       tr: "Bingöl, dağlar ile akarsu ve göl alanlarının iç içe geçtiği bir geçiş coğrafyasıdır. Doğa ve suya dayalı etkinlikler için potansiyel taşıyan bir ildir.",
       en: "Bingöl is a transition landscape where mountains meet rivers and lakes. It carries potential for nature and water-based activities.",
@@ -154,6 +157,7 @@ export const cities: City[] = [
     x: 516,
     y: 332,
     themes: ["kis-sporlari", "doga-ve-macera", "su-sporlari"],
+    image: "/images/cities/bitlis.jpg",
     summary: {
       tr: "Bitlis, volkanik göller, geçitler ve dağlık eşiklerle anılır. Kış, doğa ve su temelli sporlar açısından araştırılabilecek bir profil çizer.",
       en: "Bitlis is associated with volcanic lakes, passes and mountain thresholds. Its profile can be researched for winter, nature and water-based sports.",
@@ -179,6 +183,7 @@ export const cities: City[] = [
     x: 257,
     y: 306,
     themes: ["su-sporlari", "doga-ve-macera", "kamp-ve-outdoor"],
+    image: "/images/cities/elazig.jpg",
     summary: {
       tr: "Elazığ, Hazar Gölü çevresindeki su ve doğa sporları bakımından içerik dosyasında örneklenen iller arasındadır.",
       en: "Elazığ is one of the provinces cited in the content brief for water and nature sports around Lake Hazar.",
@@ -204,6 +209,7 @@ export const cities: City[] = [
     x: 282,
     y: 205,
     themes: ["kis-sporlari", "doga-ve-macera", "yuksek-irtifa"],
+    image: "/images/cities/erzincan.jpg",
     summary: {
       tr: "Erzincan, yüksek dağ sıraları ile verimli ovaların bir arada bulunduğu bir geçiş kentidir. Kış, doğa ve irtifa çalışmaları için değerlendirilebilecek bir eşik sunar.",
       en: "Erzincan is a threshold city where high ranges meet a fertile plain. It offers ground that can be assessed for winter, nature and altitude work.",
@@ -229,6 +235,7 @@ export const cities: City[] = [
     x: 441,
     y: 191,
     themes: ["kis-sporlari", "yuksek-irtifa", "kamp-ve-outdoor"],
+    image: "/images/cities/erzurum.jpg",
     summary: {
       tr: "Erzurum, uzun kış sezonu ve yüksek rakımıyla kış sporları ve yüksek irtifa kampları bakımından bölgenin en çok anılan merkezlerindendir.",
       en: "With its long winter and high elevation, Erzurum is among the region's most cited centres for winter sports and altitude camps.",
@@ -254,6 +261,7 @@ export const cities: City[] = [
     x: 663,
     y: 409,
     themes: ["doga-ve-macera", "yuksek-irtifa", "kamp-ve-outdoor"],
+    image: "/images/cities/hakkari.jpg",
     summary: {
       tr: "Hakkari, ülkenin en sarp dağlık alanlarından birinde yer alır. Trekking, yüksek irtifa ve kamp temelli faaliyetler için dikkatle planlanması gereken bir potansiyel barındırır.",
       en: "Hakkari lies in some of the country's steepest mountains. It holds potential for trekking, altitude and camping that needs careful planning.",
@@ -279,6 +287,7 @@ export const cities: City[] = [
     x: 690,
     y: 189,
     themes: ["doga-ve-macera", "geleneksel-sporlar", "kamp-ve-outdoor"],
+    image: "/images/cities/igdir.jpg",
     summary: {
       tr: "Iğdır, yüksek dağ silueti ile alçak ova ikliminin karşı karşıya geldiği bir sınır ilidir. Doğa sporları ve kültürel-sportif buluşmalar için incelenebilir.",
       en: "Iğdır is a border province where a high mountain skyline meets a lowland climate. It can be studied for nature sports and cultural sporting gatherings.",
@@ -304,6 +313,7 @@ export const cities: City[] = [
     x: 605,
     y: 125,
     themes: ["kis-sporlari", "geleneksel-sporlar", "doga-ve-macera"],
+    image: "/images/cities/kars.jpg",
     summary: {
       tr: "Kars, yüksek plato, uzun kış ve güçlü kültürel mirasın birlikte okunabildiği bir ildir. Kış sporları, doğa etkinlikleri ve geleneksel sporlar açısından potansiyel taşır.",
       en: "Kars can be read through its high plateau, long winter and strong cultural heritage. It carries potential for winter sports, nature events and traditional sports.",
@@ -329,6 +339,7 @@ export const cities: City[] = [
     x: 179,
     y: 336,
     themes: ["doga-ve-macera", "kamp-ve-outdoor", "kis-sporlari"],
+    image: "/images/cities/malatya.jpg",
     summary: {
       tr: "Malatya, dağ etekleri, vadiler ve güçlü tarımsal-kültürel kimliğiyle doğa ve açık hava etkinlikleri için bir eşik kentidir.",
       en: "Malatya is a threshold city of foothills, valleys and a strong agricultural and cultural identity, suited to nature and outdoor events.",
@@ -354,6 +365,7 @@ export const cities: City[] = [
     x: 462,
     y: 300,
     themes: ["doga-ve-macera", "kis-sporlari", "kamp-ve-outdoor"],
+    image: "/images/cities/mus.jpg",
     summary: {
       tr: "Muş, ova ile dağ kuşaklarının birleştiği bir coğrafyada yer alır. Doğa yürüyüşleri ve kış koşullarına dayalı hazırlık çalışmaları açısından incelenebilir.",
       en: "Muş sits where a plain meets mountain belts. It can be studied for walking and preparation in winter conditions.",
@@ -379,6 +391,7 @@ export const cities: City[] = [
     x: 287,
     y: 265,
     themes: ["doga-ve-macera", "su-sporlari", "kamp-ve-outdoor"],
+    image: "/images/cities/tunceli.jpg",
     summary: {
       tr: "Tunceli, derin vadileri ve akarsu sistemleriyle doğa, su ve kamp temelli sporlar için öne çıkan potansiyel alanlardandır.",
       en: "With deep valleys and river systems, Tunceli stands out for nature, water and camp-based sports.",
@@ -404,6 +417,7 @@ export const cities: City[] = [
     x: 630,
     y: 322,
     themes: ["su-sporlari", "doga-ve-macera", "kamp-ve-outdoor"],
+    image: "/images/cities/van.jpg",
     summary: {
       tr: "Van, Van Gölü ve çevresindeki açık alanlarla su sporları ve doğa turizmi açısından örneklenen illerin başında gelir.",
       en: "Van is a leading example in the brief for water sports and nature tourism, thanks to Lake Van and the open country around it.",
