@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { Mountain, Snowflake, Target, Tent, Compass, Waves } from "lucide-react"
+import { Dumbbell, Mountain, Snowflake, Target, Tent, Compass, Waves } from "lucide-react"
 import { Container } from "@/components/layout/container"
 import { PageHero } from "@/components/layout/page-hero"
 import { sports } from "@/content/sports"
@@ -15,6 +15,7 @@ const icons = {
   "kamp-ve-outdoor": Tent,
   "yuksek-irtifa": Compass,
   "geleneksel-sporlar": Target,
+  "salon-sporlari": Dumbbell,
 } as const
 
 export async function generateMetadata({
@@ -30,8 +31,8 @@ export async function generateMetadata({
     title: locale === "tr" ? "Spor Turizmi" : "Sports Tourism",
     description:
       locale === "tr"
-        ? "Kış, doğa ve macera, su, kamp, yüksek irtifa ve geleneksel sporlar."
-        : "Winter, nature and adventure, water, camping, altitude and traditional sports.",
+        ? "Kış, doğa ve macera, su, kamp, yüksek irtifa, geleneksel sporlar ve salon sporları."
+        : "Winter, nature and adventure, water, camping, altitude, traditional sports and indoor sports.",
   })
 }
 
@@ -44,7 +45,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       <PageHero
         locale={locale}
         eyebrow={tr ? "Spor Turizmi" : "Sports Tourism"}
-        title={tr ? "Altı Alan, Tek Bölgesel Okuma." : "Six Themes, One Regional Reading."}
+        title={tr ? "Yedi Alan, Tek Bölgesel Okuma." : "Seven Themes, One Regional Reading."}
         lede={
           tr
             ? "Branşlar coğrafyaya göre seçilir. Tesis, parkur ve organizasyon bilgisi doğrulanmadan ürün gibi sunulmaz."

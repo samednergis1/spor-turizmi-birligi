@@ -189,6 +189,35 @@ export const sports: Sport[] = [
       { tr: "Kültürel spor organizasyonları", en: "Cultural sports events" },
     ],
   },
+  {
+    slug: "salon-sporlari",
+    title: { tr: "Salon Sporları", en: "Indoor Sports" },
+    menu: { tr: "Salon Sporları", en: "Indoor Sports" },
+    summary: {
+      tr: "Spor organizasyonları açısından turizm potansiyeli oluşturur.",
+      en: "It creates tourism potential through sports events.",
+    },
+    image: "/images/tas-sehir.jpg",
+    imageAlt: {
+      tr: "Bölgeden bir kent görünümü",
+      en: "A city view from the region",
+    },
+    body: [
+      {
+        tr: "Salon sporları, spor organizasyonları açısından turizm potansiyeli oluşturur. Basketbol, voleybol, hentbol ve benzeri karşılaşmalar sporcu ile seyirci hareketini aynı kente toplayabilir.",
+        en: "Indoor sports create tourism potential through sports events. Basketball, volleyball, handball and similar fixtures can bring athletes and spectators to the same city.",
+      },
+      {
+        tr: "Bu sayfa salon adı, kapasite veya fikstür vermez. Organizasyon, tesis ve konaklama bilgisi yerel kaynaklarla doğrulanmadan ürün gibi sunulmaz.",
+        en: "This page does not name a hall, a capacity or a fixture. An event, a facility and lodging are not presented as a product before local sources confirm them.",
+      },
+    ],
+    examples: [
+      { tr: "Basketbol, voleybol ve hentbol", en: "Basketball, volleyball and handball" },
+      { tr: "Salon turnuvaları", en: "Indoor tournaments" },
+      { tr: "Sporcu ve seyirci hareketi", en: "Athlete and spectator travel" },
+    ],
+  },
 ]
 
 export function getSport(slug: string) {

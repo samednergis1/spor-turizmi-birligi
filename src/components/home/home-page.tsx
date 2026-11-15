@@ -7,6 +7,7 @@ import {
   Handshake,
   Mountain,
   Snowflake,
+  Dumbbell,
   Target,
   Tent,
   Waves,
@@ -31,6 +32,7 @@ const icons = {
   "kamp-ve-outdoor": Tent,
   "yuksek-irtifa": Compass,
   "geleneksel-sporlar": Target,
+  "salon-sporlari": Dumbbell,
 } as const
 
 const featured = ["erzurum", "van", "elazig", "siirt", "diyarbakir", "mardin"]
@@ -55,10 +57,10 @@ export function HomePage({ locale }: { locale: Locale }) {
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/25" />
         <Container className="relative flex min-h-[calc(100svh-9.5rem)] flex-col justify-end py-14 sm:py-20">
           <p className="text-2xl font-bold tracking-wide text-gold sm:text-4xl">
-            {tr ? "Sporla keşfet, turizmle geliştir." : "Discover through sport, develop through tourism."}
+            {tr ? "Sporla keşfet, turizmle geliştir" : "Discover through sport, develop through tourism"}
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl leading-[1.05] text-ivory sm:text-6xl lg:text-7xl">
-            {tr ? "Bölgenin Gücü, Sporun Geleceği." : "The Region's Strength, the Future of Sport."}
+            {tr ? "Bölgenin Gücü, Sporun Geleceği" : "The Region's Strength, the Future of Sport"}
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-ivory/90">
             {tr

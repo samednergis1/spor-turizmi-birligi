@@ -13,13 +13,13 @@ export const shortName: Copy = {
 }
 
 export const slogan: Copy = {
-  tr: "Bölgenin Gücü, Sporun Geleceği.",
-  en: "The Region's Strength, the Future of Sport.",
+  tr: "Bölgenin Gücü, Sporun Geleceği",
+  en: "The Region's Strength, the Future of Sport",
 }
 
 export const supportingLine: Copy = {
-  tr: "Sporla keşfet, turizmle geliştir.",
-  en: "Discover through sport, develop through tourism.",
+  tr: "Sporla keşfet, turizmle geliştir",
+  en: "Discover through sport, develop through tourism",
 }
 
 export const legalNotice =

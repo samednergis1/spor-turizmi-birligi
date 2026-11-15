@@ -75,6 +75,13 @@ export default async function Page({
         </article>
         <aside className="lg:col-span-5">
           <h2 className="text-2xl text-navy">{labels.relatedCities}</h2>
+          {related.length === 0 ? (
+            <p className="mt-4 text-sm leading-7 text-muted-foreground">
+              {tr
+                ? "Bu başlık henüz bir il profiline bağlanmadı. Bağlantı, yerel kaynak doğrulanınca eklenecek."
+                : "This theme is not linked to a province profile yet. A link will be added once a local source confirms it."}
+            </p>
+          ) : null}
           <ul className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-1">
             {related.map((city) => (
               <li key={city.slug}>
