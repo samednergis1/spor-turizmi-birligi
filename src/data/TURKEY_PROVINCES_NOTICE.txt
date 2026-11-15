@@ -1,0 +1,3 @@
+Province boundaries in turkey-provinces.json are from
+Turkey-Maps-GeoJSON (https://github.com/alpers/Turkey-Maps-GeoJSON),
+licensed under the Apache License, Version 2.0.
