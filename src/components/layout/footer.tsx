@@ -32,7 +32,7 @@ export function Footer({ locale }: { locale: Locale }) {
             </span>
           </Link>
           <p className="mt-4 text-sm leading-6 text-ivory/80">{slogan[locale]}</p>
-          <p className="mt-3 text-xl font-semibold leading-snug text-gold sm:text-2xl">{supportingLine[locale]}</p>
+          <p className="mt-2 text-sm text-gold">{supportingLine[locale]}</p>
         </div>
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-8">
           <div>
