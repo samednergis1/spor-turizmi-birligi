@@ -17,7 +17,7 @@ export default function Error({
 
   return (
     <Container className="py-24">
-      <h1 className="text-4xl text-navy">Sayfa şu anda açılamadı.</h1>
+      <h1 className="text-4xl text-navy">Sayfa şu anda açılamadı</h1>
       <p className="mt-3 max-w-xl text-sm leading-7 text-muted-foreground">
         This page could not be opened. Yeniden deneyebilirsiniz.
       </p>

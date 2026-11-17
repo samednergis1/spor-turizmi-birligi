@@ -7,7 +7,7 @@ export default function NotFound() {
   return (
     <Container className="py-24">
       <p className="text-xs font-semibold tracking-[0.18em] text-teal-ink uppercase">404</p>
-      <h1 className="mt-3 max-w-xl text-4xl text-navy">Bu sayfa bulunamadı.</h1>
+      <h1 className="mt-3 max-w-xl text-4xl text-navy">Bu sayfa bulunamadı</h1>
       <p className="mt-3 max-w-xl text-base leading-7 text-muted-foreground">
         This page was not found. Adres değişmiş veya hiç açılmamış olabilir.
       </p>

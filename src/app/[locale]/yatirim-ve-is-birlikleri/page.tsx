@@ -53,7 +53,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       <PageHero
         locale={locale}
         eyebrow={tr ? "Yatırım ve İş Birlikleri" : "Investment and Cooperation"}
-        title={tr ? "Bölgenin Potansiyeline Birlikte Değer Katıyoruz." : "Adding Value to the Region's Potential Together."}
+        title={tr ? "Bölgenin Potansiyeline Birlikte Değer Katıyoruz" : "Adding Value to the Region's Potential Together"}
         lede={tr ? "Üç başvuru türünden birini seçin." : "Choose one of the three request types."}
         image="/images/tas-sehir.jpg"
         imageAlt={tr ? "Taş kent ve ova" : "A stone city and the plain"}

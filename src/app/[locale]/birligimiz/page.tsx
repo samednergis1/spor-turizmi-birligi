@@ -72,7 +72,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       <PageHero
         locale={locale}
         eyebrow={tr ? "Birliğimiz" : "The Union"}
-        title={tr ? "Paydaşların Gönüllü İş Birliği Platformu." : "A Voluntary Cooperation Platform of Stakeholders."}
+        title={tr ? "Paydaşların Gönüllü İş Birliği Platformu" : "A Voluntary Cooperation Platform of Stakeholders"}
         lede={
           tr
             ? "Spor turizmini yalnızca organizasyon değil, şehirlerin ekonomik ve sosyal gelişimine katkı sunan stratejik bir alan olarak görüyoruz."

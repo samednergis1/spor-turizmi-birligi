@@ -33,7 +33,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       <PageHero
         locale={locale}
         eyebrow={tr ? "Projelerimiz" : "Projects"}
-        title={tr ? "Uygulanmamış Fikir, Fikir Olarak Kalır." : "An Idea Not Yet Carried Out Stays an Idea."}
+        title={tr ? "Uygulanmamış Fikir, Fikir Olarak Kalır" : "An Idea Not Yet Carried Out Stays an Idea"}
         lede={
           tr
             ? "Her kartta amaç, hedef kitle, ilgili yer ve durum birlikte durur. Tarih ve paydaş adı, teyit edilmeden eklenmez."

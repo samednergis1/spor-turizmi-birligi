@@ -45,7 +45,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       <PageHero
         locale={locale}
         eyebrow={tr ? "Spor Turizmi" : "Sports Tourism"}
-        title={tr ? "Yedi Alan, Tek Bölgesel Okuma." : "Seven Themes, One Regional Reading."}
+        title={tr ? "Yedi Alan, Tek Bölgesel Okuma" : "Seven Themes, One Regional Reading"}
         lede={
           tr
             ? "Branşlar coğrafyaya göre seçilir. Tesis, parkur ve organizasyon bilgisi doğrulanmadan ürün gibi sunulmaz."

@@ -34,7 +34,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       <PageHero
         locale={locale}
         eyebrow={tr ? "Bilgi Merkezi" : "Knowledge Centre"}
-        title={tr ? "Rakam, Kaynağıyla Birlikte Gelir." : "A Figure Arrives With Its Source."}
+        title={tr ? "Rakam, Kaynağıyla Birlikte Gelir" : "A Figure Arrives With Its Source"}
         lede={
           tr
             ? "Rehber metinler yayındadır. İstatistik ve indirilebilir raporlar, yazar ve yıl belli olmadan eklenmez."

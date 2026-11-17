@@ -57,7 +57,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/25" />
         <Container className="relative flex min-h-[calc(100svh-9.5rem)] flex-col justify-end py-14 sm:py-20">
           <p className="text-2xl font-bold tracking-wide text-gold sm:text-4xl">
-            {tr ? "Sporla keşfet, turizmle geliştir" : "Discover through sport, develop through tourism"}
+            {tr ? "Sporla Keşfet, Turizmle Geliştir" : "Discover Through Sport, Develop Through Tourism"}
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl leading-[1.05] text-ivory sm:text-6xl lg:text-7xl">
             {tr ? "Bölgenin Gücü, Sporun Geleceği" : "The Region's Strength, the Future of Sport"}
@@ -102,7 +102,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               {tr ? "Tanıtım" : "Introduction"}
             </p>
             <h2 className="mt-3 text-4xl leading-tight text-navy">
-              {tr ? "Potansiyel, Ortak Bir Cümlede Buluşuyor." : "Potential, Gathered in One Shared Sentence."}
+              {tr ? "Potansiyel, Ortak Bir Cümlede Buluşuyor" : "Potential, Gathered in One Shared Sentence"}
             </h2>
           </div>
           <div className="space-y-5 text-base leading-8 text-navy/85 lg:col-span-8">
@@ -138,7 +138,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                 {tr ? "Şehirleri Keşfet" : "Explore the Cities"}
               </p>
               <h2 className="mt-3 max-w-2xl text-4xl text-navy">
-                {tr ? "İki Bölge, Tek Harita." : "Two Regions, One Map."}
+                {tr ? "İki Bölge, Tek Harita" : "Two Regions, One Map"}
               </h2>
             </div>
             <Link href={localePath(locale, "/sehirlerimiz")} className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:text-teal-ink">
@@ -192,7 +192,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               {tr ? "Spor Turizmi Alanları" : "Sports Tourism Themes"}
             </p>
             <h2 className="mt-3 text-4xl text-navy">
-              {tr ? "Branşa Göre Bakın." : "Look by Discipline."}
+              {tr ? "Branşa Göre Bakın" : "Look by Discipline"}
             </h2>
           </div>
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -225,7 +225,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                 {tr ? "Projelerimiz" : "Projects"}
               </p>
               <h2 className="mt-3 max-w-3xl text-4xl">
-                {tr ? "Fikir, Planlama, Devam Eden, Tamamlanan." : "Proposal, Planning, In Progress, Completed."}
+                {tr ? "Fikir, Planlama, Devam Eden, Tamamlanan" : "Proposal, Planning, In Progress, Completed"}
               </h2>
             </div>
             <Link href={localePath(locale, "/projelerimiz")} className="inline-flex items-center gap-2 text-sm font-semibold text-gold">
@@ -258,7 +258,7 @@ export function HomePage({ locale }: { locale: Locale }) {
               {tr ? "Haberler ve Duyurular" : "News and Notices"}
             </p>
             <h2 className="mt-3 text-4xl text-navy">
-              {tr ? "Tarihi ve Kaynağı Belli Olanlar." : "Only What Has a Date and a Source."}
+              {tr ? "Tarihi ve Kaynağı Belli Olanlar" : "Only What Has a Date and a Source"}
             </h2>
             <p className="mt-4 text-sm leading-7 text-muted-foreground">
               {tr
@@ -288,7 +288,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             <div className="p-8 sm:p-10">
               <Handshake className="size-8 text-gold" aria-hidden="true" />
               <h2 className="mt-4 text-4xl">
-                {tr ? "Bölgenin Potansiyeline Birlikte Değer Katalım." : "Let Us Add Value to the Region's Potential Together."}
+                {tr ? "Bölgenin Potansiyeline Birlikte Değer Katalım" : "Let Us Add Value to the Region's Potential Together"}
               </h2>
               <p className="mt-4 text-sm leading-7 text-ivory/80">
                 {tr

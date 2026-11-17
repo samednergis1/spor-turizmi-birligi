@@ -18,8 +18,8 @@ export const slogan: Copy = {
 }
 
 export const supportingLine: Copy = {
-  tr: "Sporla keşfet, turizmle geliştir",
-  en: "Discover through sport, develop through tourism",
+  tr: "Sporla Keşfet, Turizmle Geliştir",
+  en: "Discover Through Sport, Develop Through Tourism",
 }
 
 export const legalNotice =

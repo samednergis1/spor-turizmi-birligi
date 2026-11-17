@@ -36,7 +36,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       <PageHero
         locale={locale}
         eyebrow={tr ? "Şehirlerimiz" : "Our Cities"}
-        title={tr ? "Her İl İçin Uygun Şablon." : "A Fitting Template for Every Province."}
+        title={tr ? "Her İl İçin Uygun Şablon" : "A Fitting Template for Every Province"}
         titleClassName="text-5xl sm:text-6xl lg:text-7xl"
         lede={tr ? "Ayrıntı için ilin adına dokunun." : "Tap a province name for the details."}
         image="/images/tas-sehir.jpg"
